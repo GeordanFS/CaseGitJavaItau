@@ -1,0 +1,18 @@
+<div class="card mb-3" *ngFor="let pulls of listOfPulls" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{pulls.user.avatar_url}}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title">Autor: {{pulls.user.login}}</h5>   
+            <p>Título: {{pulls.title}}</p>      
+          <p class="card-text"><small class="text-muted">Data: {{pulls.created_at | date: 'dd/MM/yyyy'}} às {{pulls.created_at | date: "HH:mm"}}</small></p>
+          <p class="card-text">Body: {{pulls.body}}</p>
+        
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
