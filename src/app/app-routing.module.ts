@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'entrar', component:EntrarComponent},
   {path: 'cadastrar', component:CadastrarComponent},
   { path: 'home', component: ListOfRepositoriesComponent },
-  { path: 'respositorio/:fullName', component: PullRequestsComponent }
+  { path: 'repositorio/:fullName', component: PullRequestsComponent }
 ];
 
 

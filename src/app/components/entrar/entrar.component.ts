@@ -24,7 +24,6 @@ export class EntrarComponent implements OnInit {
       this.auth.entrar(this.usuarioLogin).subscribe({next:(resp: UsuarioLogin)=>{this.usuarioLogin=resp 
         environment.token=this.usuarioLogin.token
         environment.nome=this.usuarioLogin.nome
-        environment.foto=this.usuarioLogin.foto
         environment.id=this.usuarioLogin.id
         this.router.navigate(['/home'])}, 
         //console.log(environment.token)

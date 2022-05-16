@@ -3,6 +3,6 @@ export class Usuario{
      public nome!: string
      public usuario!: string
      public senha!: string
-     public foto!: string
+     
      
  }

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.fonte-sora{
+    font-family: 'Sora', sans-serif;
+}
+
+.fa-github:hover{
+    color: #f37008;
+}
+.bg-cinza{
+    background-color: #dddddd;
+}
+
+.fonte-laranja{
+    color: #f37008;
+}

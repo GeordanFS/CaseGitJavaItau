@@ -1,7 +1,9 @@
-  <!-- NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="">
-        <i class="fa fa-github fa-3x mr-3 align-items-center d-flex"  aria-hidden="true"></i>
+<body class="bg-cinza">
+
+<!-- NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fonte-sora">
+    <a class="navbar-brand" routerLink="/home">
+        <i class="fa fa-github fa-2x align-items-center d-flex"></i>
       </a>
      
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -9,59 +11,73 @@
     </button>
   
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="siteCompleto.html">Home <span class="sr-only">(página atual)</span></a>
+          <a class="nav-link" routerLink="/home">Início <span class="sr-only">(página atual)</span></a>
         </li>
-    
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Redes Sociais
+        <li class="nav-item dropdown ml-auto">
+          <a class="nav-link dropdown-toggle ml-auto" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Linguagens
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://www.instagram.com/santosfc/" target="_blank">Instagram</a>
-            <a class="dropdown-item" href="https://twitter.com/SantosFC" target="_blank">Twitter</a>
-            <a class="dropdown-item" href="https://www.facebook.com/santosfc"target="_blank">Facebook</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://www.santosfc.com.br/"target="_blank">Site Oficial</a>
-            <a class="dropdown-item" href="https://www.santosstore.com.br/"target="_blank">Santos Store</a>
+            <a class="dropdown-item" routerLink="/home">Java</a>
+            <a class="dropdown-item disabled" routerLink="" >Python</a>
+            <a class="dropdown-item disabled" routerLink="">JavaScript</a>
+            <a class="dropdown-item disabled" routerLink="">C#</a>
+           
           </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav d-flex ml-auto align-items-center">
+        <li class="nav-item dropdown ml-auto d-flex align-items-center">
+          <a class="nav-link dropdown-toggle ml-auto mr-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Links Úteis
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.linkedin.com/in/geordanfagundes/" target="_blank">Criador</a>
+            <a class="dropdown-item" href="https://github.com/GeordanFS/CaseGitJavaItau" target="_blank">Repositório Front</a>
+            <a class="dropdown-item" href="https://github.com/GeordanFS/CaseGitJava-backend"target="_blank">Repositório Back</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.itau.com.br/"target="_blank">Site Oficial Itaú</a>
+            <a class="dropdown-item" href="https://www.linkedin.com/company/itau/"target="_blank">Linkedin Itaú</a>
+          </div>
+          <img src="../../../assets/img/itau.png" width="35px" alt="">
         </li>
         
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-      </form>
+      
     </div>
   </nav>
 <!-- NAVBAR fim-->
 
 <!--//
      //-->
-     
-     <div class="card mb-3" *ngFor="let repository of listOfRepositories" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="{{repository.owner.avatar_url}}" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{repository.name}}</h5>       
-              <p class="card-text"><small class="text-muted">Autor: {{repository.owner.login}}</small></p>
-              <p class="card-text">Descrição: {{repository.description}}</p>
-              
-              <div class="row d-flex">
-                  <div class="col-md-5"><i class="fa fa-code-fork" aria-hidden="true"> {{repository.forks_count}} forks</i></div>
-                  <div class="col-md-5"><i class="fa fa-star" aria-hidden="true"></i> {{repository.stargazers_count}} stars</div>
+     <div class="container fonte-sora col-md-10">
+       
+        <div class="card mb-3" *ngFor="let repository of listOfRepositories">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{repository.owner.avatar_url}}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{repository.name}}</h5>       
+                <p class="card-text"><small class="text-muted">Autor: {{repository.owner.login}}</small></p>
+                <p class="card-text">Descrição: {{repository.description}}</p>
+                
+                <div class="row d-flex fonte-laranja">
+                    <div class="col-md-3 "><i class="fa fa-code-fork fa-2x" aria-hidden="true"></i>  {{repository.forks_count}} forks</div>
+                    <div class="col-md-3"><i class="fa fa-star fa-2x" aria-hidden="true"></i>  {{repository.stargazers_count}} stars</div>
+                </div>
+    
+                <a href="" class="btn btn-dark d-block mt-5 fonte-laranja" [routerLink]="['/repositorio', repository.full_name]">Ver pull requests</a>
+                
+                
               </div>
-
-              <a href="" class="btn btn-secondary d-block mt-3" [routerLink]="['/respositorio', repository.full_name]">Ver pulls</a>
-              
-              
             </div>
           </div>
-        </div>
-      </div>
+        </div></div>
+       
       
-    
+      
+      </body>

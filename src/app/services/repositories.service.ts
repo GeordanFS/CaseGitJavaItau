@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PullsOfProject } from '../interfaces/pulls-of-project';
-
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { Repositories } from '../interfaces/repositories';
 import { Items } from '../interfaces/items';
-import { ItemsPulls } from '../interfaces/items-pulls';
+
 
 @Injectable({
   providedIn: 'root'
